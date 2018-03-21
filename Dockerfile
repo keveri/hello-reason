@@ -7,4 +7,7 @@ RUN opam update -uy
 RUN opam install reason
 RUN opam install re
 
+VOLUME /src
 WORKDIR /src
+
+RUN sudo chown -R opam /src
