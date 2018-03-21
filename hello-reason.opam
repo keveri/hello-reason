@@ -1,0 +1,22 @@
+opam-version: "1.2"
+name: "hello-reason"
+version: "0.0.1"
+maintainer: "Matias Keveri"
+authors: [
+  "Matias Keveri"
+]
+license: "MIT"
+homepage: "https://github.com/keveri/hello-reason"
+doc: "https://github.com/keveri/hello-reason"
+bug-reports: "https://github.com/keveri/hello-reason/issues"
+dev-repo: "git://github.com/keveri/hello-reason.git"
+tags: [ "reason" "example" "native"]
+build: [
+  ["jbuilder" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "jbuilder" {build}
+  "reason"  {= "3.0.4"}
+  "re"
+]
+available: [ ocaml-version >= "4.02" & ocaml-version < "4.05" ]
